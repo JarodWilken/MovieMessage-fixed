@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewMovieName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What is the movie's name: " />
+
+        <EditText
+            android:id="@+id/editTextMovieName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate the movie (1 = low, 5 = high): " />
+
+        <Spinner
+            android:id="@+id/spinnerStar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/buttonSaveMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Movie" />
+
+        <Button
+            android:id="@+id/buttonReturn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go Back to Homescreen" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
