@@ -5,13 +5,14 @@ import java.io.Serializable;
 public class Movie implements Serializable {
     private String movieTitle;
     private int rating;
-
-    public Movie(){
+    private String key;
+    public Movie() {
     }
 
-    public Movie(String movieTitle, int rating){
+    public Movie(String key, String movieTitle, int rating){
         this.movieTitle = movieTitle;
         this.rating = rating;
+        this.key = key;
     }
 
     public String getMovieTitle(){

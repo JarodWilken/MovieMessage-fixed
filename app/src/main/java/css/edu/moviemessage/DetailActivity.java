@@ -9,9 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.firebase.database.DatabaseReference;
+
 public class DetailActivity extends AppCompatActivity {
     EditText editTextMovieName;
     Button buttonSaveMovie, buttonBack;
+    movieFirebaseData movieDataSource;
+    DatabaseReference myMovieDb;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,9 @@ public class DetailActivity extends AppCompatActivity {
         buttonSaveMovie = (Button) findViewById(R.id.buttonSaveMovie);
         buttonBack = (Button) findViewById(R.id.buttonReturn);
 
+
+        movieDataSource = new movieFirebaseData();
+        myMovieDb = movieDataSource.open();
 
 
         String[] arraySpinner = new String[] {
@@ -47,9 +54,9 @@ public class DetailActivity extends AppCompatActivity {
                 String movieTitle = editTextMovieName.getText().toString();
                 int star = ((Spinner)findViewById(R.id.spinnerStar)).getSelectedItemPosition();
                 movieDataSource.createMovie(movieTitle, star);
-                Intent mainActIntent = new Intent(view.getContext(), MainActivity.class);
+                //Intent mainActIntent = new Intent(view.getContext(), MainActivity.class);
                 finish();
-                startActivity(mainActIntent);
+                //startActivity(mainActIntent);
             }
         });
     }
