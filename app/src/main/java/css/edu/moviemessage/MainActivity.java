@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        listViewMovie = findViewById(R.id.listViewMovie);
+
         setSupportActionBar(toolbar);
         setupFirebaseDataChange();
         setupAddButton();
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupFirebaseDataChange() {
+        Log.d("CIS3334", "setupFirebaseDataChange");
         movieDataSource = new movieFirebaseData();
         myMovieDb = movieDataSource.open();
         myMovieDb.addValueEventListener(new ValueEventListener() {
@@ -60,9 +63,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("CIS3334", "Starting onDataChange()");        // debugging log
                 movieList = movieDataSource.getAllMovie(dataSnapshot);
                 // Instantiate a custom adapter for displaying each movie
+                Log.d("CIS3334", "Starting onDataChange with size : "+movieList.size());
                 movieAdapter = new MovieAdapter(MainActivity.this, android.R.layout.simple_list_item_single_choice, movieList);
                 // Apply the adapter to the list
+                Log.d("CIS3334", "Starting onDataChange()setting up adapter 222");
                 listViewMovie.setAdapter(movieAdapter);
+                Log.d("CIS3334", "onDataChange()done with adapter 333");
             }
 
             @Override

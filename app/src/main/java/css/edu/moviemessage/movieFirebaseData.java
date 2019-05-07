@@ -39,6 +39,7 @@ public class movieFirebaseData {
         List<Movie> fishList = new ArrayList<Movie>();
         Log.d("CIS3334", "get all movie");
         for (DataSnapshot data : dataSnapshot.getChildren()) {
+            Log.d("CIS3334", "get a movie");
             Movie movie = data.getValue(Movie.class);
             fishList.add(movie);
         }
