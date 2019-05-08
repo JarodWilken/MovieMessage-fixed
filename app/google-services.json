@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "3828863014",
+    "firebase_url": "https://moviemessage-master-82cbc.firebaseio.com",
+    "project_id": "moviemessage-master-82cbc",
+    "storage_bucket": "moviemessage-master-82cbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3828863014:android:f0979411eb0e3d00",
+        "android_client_info": {
+          "package_name": "css.edu.moviemessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3828863014-jjg2t8d7hoquif55mkl581c0lo9qnoc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "css.edu.moviemessage",
+            "certificate_hash": "235744989422e18092fc5eb469ba512d6348957c"
+          }
+        },
+        {
+          "client_id": "3828863014-hd91bo778mrsgae797lr4cu3bg4pdr4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB7TP1cUIPhPP2Ica2S8iEVlgjoO_OknE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3828863014-hd91bo778mrsgae797lr4cu3bg4pdr4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
